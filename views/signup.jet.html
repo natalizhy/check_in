@@ -66,7 +66,7 @@
         <div class="body">
             <br>
             <label>
-                номер телефона:<br><input type="tel" name="phone" placeholder="+3" autocomplete="on" required />
+                номер телефона:<br><input type="tel" name="phone" placeholder="+3" autocomplete="on"  />
                 {{if .Phone != ""}}
                 <p>{{.Phone}}</p>
                 {{end}}
@@ -74,7 +74,10 @@
             <br>
             <br>
             <label>
-                пароль:<br><input type="password" name="pass" autocomplete="on" required/>
+                пароль:<br><input type="password" name="pass" autocomplete="on" />
+                {{if .Password != ""}}
+                <p>{{.Password}}</p>
+                {{end}}
             </label>
             <br><br>
             <input id="bt" type="submit" value="Зарегистрироваться" />
