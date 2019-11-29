@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+<style>
+
+    body {
+        font-size: 0.85em;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+        color: rgba(0,0,0,.7);
+    }
+
+    label input {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 31px;
+        border-radius: 7px;
+        outline: none;
+        margin-top: 4px;
+        padding: .59375rem .9375rem;
+        border: 1px solid #dfe3e9;
+        font-size: 16px;
+    }
+
+    #bt {
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+        position: relative;
+        background-color:#2196F3;
+        max-width: 100%;
+        margin: 0;
+        padding: .5rem 1.25rem;
+        transition: all .15s ease-in-out;
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #1a91eb;
+        color: #fff;
+        font-size: .9rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+        overflow: hidden;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        width: 100%;
+    }
+
+    .body {
+        min-width: 205px;
+        max-width: 290px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+</head>
+
+<body>
+    <form action="/signup" method="POST">
+        <div class="body">
+            <br>
+            <label>
+                номер телефона:<br><input type="tel" name="phone" placeholder="+3" autocomplete="on" required />
+                {{if .Phone != ""}}
+                <p>{{.Phone}}</p>
+                {{end}}
+            </label>
+            <br>
+            <br>
+            <label>
+                пароль:<br><input type="password" name="pass" autocomplete="on" required/>
+            </label>
+            <br><br>
+            <input id="bt" type="submit" value="Зарегистрироваться" />
+        </div>
+
+    </form>
+
+</body>
+</html>
